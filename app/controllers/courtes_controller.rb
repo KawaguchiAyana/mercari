@@ -10,9 +10,9 @@ class CourtesController < ApplicationController
         current_user.carts.create(item: item)
         redirect_to mypage_path, notice: "商品をカートに追加しました！"
       end
-    end
-    
   end
+    
+
   def destroy
     # ユーザーのカートから指定されたアイテムを検索
     court = current_user.courts.find_by(id: params[:id])
